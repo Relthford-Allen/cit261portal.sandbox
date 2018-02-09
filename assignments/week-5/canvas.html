@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Allen Relthford Assignment Portal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+        <link href="/assignments/week-5/styles/style.css" type="text/css" rel="stylesheet" media="screen">
+        <title>CIT 261</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav role="navigation" id="nav">
+            <p><a href="/assignments/week-5/index.html" title="CIT-261">Return to List</a></p>
+        </nav>
+        <main role="main">
+        <h1>Canvas Tags</h1>
+            <h2>Definition</h2>
+            <blockquote>
+                <p>According to <span style="color:hotpink"><a href="https://www.w3schools.com/graphics/canvas_intro.aspine">w3schools.com</a></span>, the HTML canvas element is used to draw graphics using JavaScript.
+
+                    <br>The canvas element is only a <span style="color:hotpink">container</span> for graphics.
+
+        <br>Script tags are required to draw the graphics.
+
+        <br>Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+                    <br>The canvas element must be acompanied by a <span style="color:hotpink">id attribute</span>, so it can be referred to by JavaScript.
+
+        <br>The height and width attribute is needed to define the size of the canvas withing the HTML page.
+
+        <br>Multiple canvas elements may be applied to one HTML page.
+        </p>
+        <br>
+            </blockquote>
+        <p>This is an example of using canvas tags to add some flavor to a web page.</p>
+
+            <blockquote>
+                <pre>
+                <p>
+                    <span style="color:hotpink">canvas id="canvas" width="600" height="400"/></span>
+                        script>
+                        var canvas = document.getElementById("canvas");
+                        var c = canvas.getContext("2d");
+
+                        c.font = '60pt Arial';// sets the size and font used
+                        c.fillStyle = 'hotpink';// sets fill color for text
+                        c.strokeStyle = 'black';//sets border color
+
+                        var x = 20,
+                            y = 60,
+                            text = 'CIT261 is Fun!!!';
+                        c.fillText(text , x, y);
+                        c.strokeText(text, x, y);
+                    /script>
+                </p>
+                </pre>
+            </blockquote>
+
+        <canvas id="canvas" width="600" height="400"/>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+            var c = canvas.getContext("2d");
+
+            c.font = '60pt Arial';// sets the size and font used
+            c.fillStyle = 'hotpink';// sets fill color for text
+            c.strokeStyle = 'black';//sets border color
+
+            var x = 20,
+                y = 60,
+                text = 'CIT261 is Fun!!!';
+            c.fillText(text , x, y);
+            c.strokeText(text, x, y);
+        </script>
+
+        </main>
+        <footer role="contentinfo">
+            <p>&copy;2018 &#9830; Allen Relthford &#9830; <a href="http://byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+    </body>
+</html>

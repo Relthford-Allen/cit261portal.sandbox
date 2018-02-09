@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Allen Relthford Assignment Portal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+        <link href="/assignments/week-4/styles/style.css" type="text/css" rel="stylesheet" media="screen">
+        <title>CIT 261</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav role="navigation" id="nav">
+            <p><a href="/assignments/week-4/index.html" title="CIT-261">Return to List</a></p>
+        </nav>
+        <main role="main">
+            <h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
+            <hr>
+            <h3>
+                Local Storage &amp; Session Storage
+            </h3>
+            <p>
+                HTML5 Local Storage &amp; Session Storage are a part of the
+                Web storage API. Both of these objects give a way that web pages
+                can be stored as named key/value pairs within a browser. This is
+                similar to cookies, where the data exists even when the browser
+                tab is closed, or when you browse to another site, or when you
+                exit the browser. Local storage data will still be there in a week,
+                a month, or a years time, however Session storage disappears when the browser tab is closed.
+            </p>
+            <ul>
+                <li>Depending on device, local storage can hold 2 -100Mb+ of data</li>
+                <li>Saved as string format such as JSON</li>
+                <li>Useful for web interface data</li>
+                <li>Helpful for temporary  or offline data</li>
+                <li>Can read, write, and delete data</li>
+                <li>Must parse when reading</li>
+                <li>Must stringify data when writing</li>
+
+            </ul>
+            <h4>Local Storage object and methods</h4>
+            <blockquote>
+                <code>localStorage.setItem()</code> - stores data with no expiration date<br/>
+                <code>localStorage.getItem()</code> - retrieves from local storage<br/>
+                <code>localStorage.removeItem()</code> - removes from local storage<br/>
+                <code>localStorage.clear()</code> - clears all storage<br/>
+                <code>sessionStorage.setItem()</code> - stores data for one session (data is lost when the browser tab is closed)<br/>
+                <code>sessionStorage.getItem()</code> - retrieves from session storage<br/>
+                <code>sessionStorage.removeItem()</code> - removes from session storage<br/>
+            </blockquote>
+            <h4>Code Example</h4>
+            <script src=""></script>
+            <p>Return values of above code: <button id="btn01">Retrieve Local storage</button>
+            <div id="retrieveLocalStorage"></div>
+            <script type="text/javascript" src="/assignments/week-4/scripts/local_storage.js"></script>
+        </main>
+        <footer role="contentinfo">
+            <br>
+            <p>&copy;2018 &#9830; Allen Relthford &#9830; <a href="http://byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+    </body>
+</html>

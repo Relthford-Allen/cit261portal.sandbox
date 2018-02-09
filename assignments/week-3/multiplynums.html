@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Allen Relthford Assignment Portal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+        <link href="/assignments/week-3/styles/style.css" type="text/css" rel="stylesheet" media="screen">
+        <title>CIT 261</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav role="navigation" id="nav">
+            <p><a href="/assignments/week-3/index.html" title="CIT-216">Return to List</a></p>
+        </nav>
+        <h1>Multiply Number Arguments</h1>
+        <p>In this code I will multiple user input a and b and return a correct product.</p>
+        <p id="function"></p>
+        <script>
+            function multNums(a, b) {
+                var a = prompt("Enter a number:", "0");
+                var b = prompt("Enter a number:", "0");
+                var num1 = parseInt(a);
+                var num2 = parseInt(b);
+                return a * b;
+            }
+            document.getElementById("function").innerHTML = multNums();
+        </script>
+    </body>
+</html>

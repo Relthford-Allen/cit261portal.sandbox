@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Allen Relthford Assignment Portal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+        <link href="/assignments/week-3/styles/style.css" type="text/css" rel="stylesheet" media="screen">
+        <title>CIT 261</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav role="navigation" id="nav">
+            <p><a href="/assignments/week-3/index.html" title="CIT-261">Return to List</a></p>
+        </nav>
+        <main role="main">
+            <h2>JSON Parse, Stringify</h2>
+            <hr>
+            <h3>Definition:</h3>
+            <p>JSON is an acronym for Javascript Object Notation.
+                It is a standard that uses text to represent Javascript
+                objects. It is used in server-client data transmission
+                in web applications eg., sending data from server to client
+                so it can be displayed in a browser, or vice versa.
+            </p>
+            <p>
+                Here are 2 free sites available for assisting with generating JSON objects and validating them. To generate a JSON object you can use <a href="http://filltext.com">filltext.com</a>. Here is a validator you can use for JSon.
+                <a href="https://jsonlint.com/">JSONlint</a>
+            </p>
+            <h4>JSON Structure</h4>
+            <p>
+                A <span style="color:hotpink">JSON</span> object is a string which has similar appearance to Javascript object literal. You are able to include the same basic data types, like strings, numbers, booleans, etc. See below an example of a
+                <span style="color:hotpink">JSON</span> object which was generated from  www.filltext.com,
+                once you get to know how to do it. For those interested to create this I typed the following to produce the <span style="color:hotpink">JSON</span> object.
+            </p>
+            <blockquote>
+                <code>
+                    <span style="color:hotpink">
+                        http://www.filltext.com/?rows=3&amp;pretty=true&amp;ID={index}&amp;fname={firstName}&amp;lname={lastName}
+                        &amp;business={business}a&amp;ddress={addressObject}
+                    </span>
+                </code>
+            </blockquote>
+            <script src=""></script>
+            <h4>
+                JSON.parse() method
+            </h4>
+            <p>
+                The data sent from a web server is always a string. To convert
+                this string to a Javascript object you will use the <code>
+                JSON.parse()</code> method. Heres an example of code we receive from the web server:
+            </p>
+            <pre>
+    '{num:123, str:"Learning Javascript", bool:true,
+    o:{x:1, y:2},iamnull:null, array[1,2,3]}'
+            </pre>
+            <p>
+                We could parse this text string and change it to a Javascript
+                object using the following command.
+            </p>
+            <script src=""></script>
+            <blockquote>
+                <p>Return values of above code: <button id='btn01'>Parse</button></p>
+                <div id="parse_01"></div>
+            </blockquote>
+            <script type="text/javascript" src="/assignments/week-3/scripts/parse_01.js"></script>
+            <p></p>
+            <h4>
+                JSON.stringify() method
+            </h4>
+            <p>
+                JSON.stringify() converts a Javascript object to a string or
+                JSON object that can be sent to a webserver. In this example we will "stringify" the same Javascript that we created above.
+            </p>
+            <script src=""></script>
+            <blockquote>
+                <p>Return values of above code: <button id='btn02'>Stringify</button></p>
+                <div id="stringify_01"></div>
+            </blockquote>
+            <script type="text/javascript" src="/assignments/week-3/scripts/stringify_01.js"></script>
+            <p></p>
+        </main>
+        <footer role="contentinfo">
+            <br>
+            <p>&copy;2018 &#9830; Allen Relthford &#9830; <a href="http://byui.edu/online">BYU-Idaho Online Learning</a></p>        </footer>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+/* Import fonts */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab';
+/* for ease these can be copied and pasted into the stylesheet*/
+/*font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans', sans-serif;*/
+/* Change the box model to border box on all elements */
+
+/**{
+box-sizing: border-box;
+}*/
+/* Set the height and width to html and body to 100% */
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* Set general rules for body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    color: #0E223D;
+    font-weight: 700;
+}
+body{
+    background-color: #9932CC;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* set backgrounds of header, main transparent*/
+main[role] {
+    background-color: rgba(255,255,255,.8);
+}
+
+[role=banner] {
+    background-color: rgba(241, 241, 241,.4);
+    border-bottom: solid 10px #0e223d;
+}
+header, main[role], nav, footer[role] {
+    width: 71.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+main[role]{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Remove default list marker, margin and padding from these lists */
+ul,ol{
+    /*list-style: none;*/
+    margin: 10;
+    padding: 10;
+}
+
+/* remove text decoration for all anchors */
+a {
+    text-decoration: none;
+}
+
+header, main, nav {
+    margin: 1.25rem auto;
+    padding: .5rem;
+    /*max-width:900px;*/
+}
+
+/*footer{
+margin: 1.25rem auto;
+}*/
+
+code, pre{
+    font-size: 12pt;
+    font-family: courier new;
+    color:#1E90FF;
+    width: 65%
+}
+
+/* From this point we control element sizes and layout for screen display */
+h1,h2,h3,h4{
+    /*font-size: 8vw;  Roughly 8% of the screen width*/
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.hide-btn {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.75);
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.75);
+}
+
+.unhide{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.redText{
+    color: red;
+}
+
+.shrink{
+    font-size:6pt;
+}
+
+
+
+footer[role] {
+    min-height: 80px;
+}
+
+/* style footer anchors */
+
+footer[role] span {
+    color: #FFF;
+    font-weight: bold;
+}
+
+footer[role]{
+    font-size: .85em; /* 12.8px */
+    background-color: #0E223D;
+    margin-bottom:40px;
+    max-height: 100px;
+}
+
+footer[role] p {
+    text-align: center;
+    color: #FFF;
+}

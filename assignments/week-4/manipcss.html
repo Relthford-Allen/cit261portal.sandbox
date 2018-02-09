@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Allen Relthford Assignment Portal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+        <link href="/assignments/week-4/styles/style.css" type="text/css" rel="stylesheet" media="screen">
+        <title>CIT 261</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav role="navigation" id="nav">
+            <p><a href="/assignments/week-4/index.html" title="CIT-261">Return to List</a></p>
+        </nav>
+        <main role="main" id="main">
+            <h2>Manipulating CSS Class Properties Using JavaScript.</h2>
+            <hr>
+            <h3>
+                Overview
+            </h3>
+            <p>
+                When it comes to Javascript we do not want to manipulate the
+                CSS directly. It is best to have CSS set up that can do the manipulation.
+                This is helpful when collaborating as a team. One team member can focus on CSS while the other can deal with the JavaScript.
+            </p>
+            <p>
+                The two ways to manipulate classes in plain Javascript are with
+                <code><span style="color:hotpink">className</span></code> and
+                <code><span style="color:hotpink">classList</span></code>. Using <code><span style="color:hotpink">
+                className</span></code> is a more direct approach and will work
+                in every browser, whereas using <code><span style="color:hotpink">classList</span></code>
+                is much simpler, but may not be supported in every browser. We will
+                focus our efforts here on <code><span style="color:hotpink">classList</span></code>
+            </p>
+            <p>
+                Here are some example methods of the <code><span style="color:hotpink">classList</span></code>
+                API.
+            </p>
+            <ul>
+                <code><span style="color:hotpink">
+                    <li>add(String [,String])</li>
+                    <li>remove(String [,String])</li>
+                    <li>item(Number)
+                    <li>toggle(String [,force])</li>
+                    <li>contains(String)</li>
+                    <li>replace(oldClass, newClass)</li>
+                    </span></code>
+            </ul>
+            <p></p>
+            <h2>Examples of Class Manipulation with Javascript</h2>
+            <p></p>
+            <button id="btn01" type="button" onclick="hide()">&nbsp;Hide &nbsp;&nbsp;Text&nbsp;</button>&nbsp;<button id="btn02" type="button" onclick="unhide()">Unhide &nbsp;Text</button>
+            <p></p>
+            <button id="btn03" type="button" onclick="redText()">&nbsp;Red &nbsp;&nbsp;&nbsp;Text&nbsp;</button>&nbsp;<button id="btn03" type="button" onclick="blackText()">&nbsp;Black&nbsp;&nbsp;&nbsp;Text&nbsp;</button>
+            <p></p>
+            <button id="btn04" type="button" onclick="shrink()">Toggle&nbsp;Shrink</button>
+            <div id="manipulate" class ="unhide">
+                <h1>Noone Manipulates ME!!</h1>
+            </div>
+            <h3>
+                Code for Class Manipulation above:
+            </h3>
+            <blockquote>
+                <pre>
+                <p>
+                    <span style="color:hotpink">// Class Manipulation</span>
+                    <span style="color:hotpink">// manipulate.js</span>
+                    <span style="color:hotpink">// This function will hide </span>
+                function hide(){
+                var divElement = document.querySelector('#manipulate');
+                if (divElement.classList.contains('unhide') === true) {
+                divElement.classList.add('hide');
+                divElement.classList.remove('unhide');
+                }
+                }
+                    <span style="color:hotpink">// This function will unhide </span>
+                function unhide(){
+                var divElement = document.querySelector("#manipulate");
+                if (divElement.classList.contains('hide') === true) {
+                divElement.classList.replace('hide', 'unhide');
+                }
+                }
+                    <span style="color:hotpink">// This function will color the text red</span>
+                function redText(){
+                var divElement = document.querySelector("#manipulate");
+                divElement.classList.add('redText');
+                }
+                    <span style="color:hotpink">// This function will return the color to black</span>
+                function blackText(){
+                var divElement = document.querySelector("#manipulate");
+                divElement.classList.remove('redText');
+                }
+
+                    <span style="color:hotpink">// this funtion will toggle between shrink and original size</span>
+                function shrink(){
+                var divElement = document.querySelector("#manipulate");
+                divElement.classList.toggle('shrink');
+                }
+                </p>
+        </pre>
+            </blockquote>
+            <script src="/assignments/week-4/scripts/manipulate.js"></script>
+        </main>
+        <footer role="contentinfo">
+            <br>
+            <p>&copy;2018 &#9830; Allen Relthford &#9830; <a href="http://byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+    </body>
+</html>
